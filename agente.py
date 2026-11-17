@@ -1,18 +1,16 @@
 import os
 import google.generativeai as genai
 
-# Aquí pegas tu llave de API entre las comillas que sacaste en el Paso 1
-API_KEY = "AQ.Ab8RN6IuxfDRRhhd29xF7QNjMdYqc90yTXXQqOXZD4niWoRJWwI"
+API_KEY = "AQ.Ab8RN6LeTuxe52KmwhBv0NkvzaEhga6l9eZj0TJkJX5J2jB5Gg"
 
 genai.configure(api_key=API_KEY)
 
-# Usamos un modelo gratuito y rápido de Gemini
+# Nota: si usas la librería anterior, mantén 'gemini-1.5-flash' que es el nombre que reconoce internamente
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 print("¡Hola! Soy tu agente inicial en la nube.")
 print("¿Qué tarea quieres que analice o resuelva hoy?")
 
-# Ejemplo de una pregunta o tarea inicial para el agente
 prompt = "Preséntate y dime 3 ideas sencillas para generar ingresos usando automatización."
 
 response = model.generate_content(prompt)
